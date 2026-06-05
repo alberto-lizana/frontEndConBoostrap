@@ -1,0 +1,7 @@
+{
+    "id": 1,
+    "nombre": "Administrador",
+    "email": "admin@test.cl",
+    "contrasena": "123456789987654321",
+    "rol": "admin"
+}
