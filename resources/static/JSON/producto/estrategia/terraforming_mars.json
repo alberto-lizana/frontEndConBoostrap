@@ -1,6 +1,8 @@
+
 {
     "id": 1,
     "nombre": "Terraforming Mars",
+    "imagen": "terraforming-mars.jpg",
     "descripcion": "Un juego de estrategia donde los jugadores compiten para terraformar Marte y hacerlo habitable.",
     "categoria": "Estrategia",
     "precio": 65000,

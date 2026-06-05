@@ -2,6 +2,7 @@
 {
     "id": 8,
     "nombre": "Call Of Cthulhu",
+    "imagen": "cthulhu.jpg",
     "descripcion": "Un juego de rol de horror e investigación inspirado en las historias de H.P. Lovecraft.",
     "categoria": "Rol",
     "precio": 55000,

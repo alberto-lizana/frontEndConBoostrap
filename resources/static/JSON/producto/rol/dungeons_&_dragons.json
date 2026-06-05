@@ -2,6 +2,7 @@
 {
     "id": 7,
     "nombre": "Dungeon & Dragons",
+    "imagen": "dungeons_dragons.jpg",
     "descripcion": "Un juego de rol de fantasía donde los jugadores crean personajes, viven aventuras y exploran mundos mágicos.",
     "categoria": "Rol",
     "precio": 60000,

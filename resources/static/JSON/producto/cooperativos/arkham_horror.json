@@ -2,6 +2,7 @@
 {
     "id": 6,
     "nombre": "Arkham Horror",
+    "imagen": "arkham_horror.jpg",
     "descripcion": "Un juego cooperativo de terror e investigación inspirado en el universo de Lovecraft.",
     "categoria": "Cooperativo",
     "precio": 70000,

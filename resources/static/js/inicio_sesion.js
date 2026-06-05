@@ -1,0 +1,52 @@
+import { validarEmail, normalizarString, limpiarFormulario } from './funciones_reutilizables.js'
+import { getAdmin, getUsuarios } from './storage.js';
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const iniciarSesionForm = document.getElementById("iniciarSesionForm");
+    const emailUser = document.getElementById("emailUser");
+    const contrasenaUser = document.getElementById("contrasenaUser");
+
+    const administrador = await getAdmin();
+    const cuentasCreadas = await getUsuarios();
+
+    iniciarSesionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!validarEmail(emailUser.value)) {
+            return alert("Email inválido");
+        }
+
+        const data = {
+            email: normalizarString(emailUser.value),
+            contrasena: contrasenaUser.value.trim()
+        };
+
+        if (isAdmin(administrador, data)) {
+            alert('Administrador iniciado.');
+            limpiarFormulario(iniciarSesionForm);
+            return window.location.href = '../templates/admin/inicio_admin.html';
+        }
+
+        const user = cuentasCreadas.find(
+            item => item.email === data.email && item.contrasena === data.contrasena
+        );
+
+        if (user) {
+            alert(`Bienvenido ${user.nombre} ${user.appat} ${user.apmat}.`);
+            limpiarFormulario(iniciarSesionForm);
+            return window.location.href = '../templates/user/inicio_user.html';
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+    });
+});
+
+function isAdmin(administrador, data) {
+    if (!administrador) return false;
+    return (
+        administrador.email === data.email &&
+        administrador.contrasena === data.contrasena &&
+        administrador.rol === "admin"
+    );
+}

@@ -2,6 +2,7 @@
 {
     "id": 3,
     "nombre": "Catan",
+    "imagen": "catan.jpg",
     "descripcion": "Un juego de estrategia y comercio donde los jugadores construyen aldeas, caminos y ciudades para dominar la isla.",
     "categoria": "Estrategia",
     "precio": 50000,
