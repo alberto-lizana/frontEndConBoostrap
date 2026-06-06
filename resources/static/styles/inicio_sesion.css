@@ -30,11 +30,6 @@
 }
 
 .btn-bd-primary {
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    box-shadow: 0 0 10px var(--destacar-primario);
     color: var(--texto-blanco);
 }
 

@@ -22,25 +22,24 @@
     height: var(--circulo);
 }
 
-.contenedor-icons-switch {
+.contenedor-icons-switch{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 10px;
-    color: var(--texto-principal);
 }
 
 .iconos-ld-izquierda {
     font-size: calc(var(--alto) * var(--ratio-iconos));
     margin-right: 0.30%;
-    color: var(--texto-blanco)
 }
 
 .iconos-ld-derecha {
     font-size: calc(var(--alto) * var(--ratio-iconos));
     margin-right: 0.30%;
     margin-left: 0.4%;
-    color: var(--texto-blanco)
 }
 .contenedor-icons-switch {
     padding: 0.15%;

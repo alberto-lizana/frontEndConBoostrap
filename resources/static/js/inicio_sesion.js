@@ -24,9 +24,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (isAdmin(administrador, data)) {
             alert('Administrador iniciado.');
+
             limpiarFormulario(iniciarSesionForm);
-            return window.location.href = '../templates/admin/inicio_admin.html';
+
+            sessionStorage.setItem(
+                "sesion",
+                JSON.stringify({
+                    logueado: true,
+                    user: administrador
+                })
+            );
+
+            window.location.href = '../templates/admin/inicio_admin.html';
+            return;
         }
+    
 
         const user = cuentasCreadas.find(
             item => item.email === data.email && item.contrasena === data.contrasena
@@ -34,8 +46,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (user) {
             alert(`Bienvenido ${user.nombre} ${user.appat} ${user.apmat}.`);
+            
+            sessionStorage.setItem(
+                "sesion",
+                JSON.stringify({
+                    logueado: true,
+                    user: user 
+                })
+            );
+
             limpiarFormulario(iniciarSesionForm);
+            
             return window.location.href = '../templates/user/inicio_user.html';
+        
         } else {
             alert("Usuario o contraseña incorrectos");
         }

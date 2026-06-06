@@ -1,0 +1,84 @@
+.contenedor-img {
+    background-image: url("../img/img_incial.png");
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 80vh;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 100px rgb(53, 28, 28);
+    z-index: 0;
+    border: solid 1px black;
+    position: relative;
+}
+
+.main-class{
+    margin: clamp(20px, 1.7vh, 10px);
+}
+
+.contenedor-img-img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.contenedor-img-estrategia {
+    background-image: url("../img/estrategia.png");
+    border: solid 2px black ;
+}
+
+.contenedor-img-cooperativos {
+    background-image: url("../img/cooperativos.png");
+
+}
+
+.contenedor-img-rol {
+    background-image: url("../img/rol.png");
+}
+
+.contenedor-img-casual {
+    background-image: url("../img/casual.png");
+}
+
+.contenedor-img-estrategia, .contenedor-img-cooperativos, 
+.contenedor-img-rol, .contenedor-img-casual {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    min-height: 90vh;
+}
+
+.contenedor-img-estrategia:hover,
+.contenedor-img-cooperativos:hover,
+.contenedor-img-rol:hover,
+.contenedor-img-casual:hover {
+    transform: scale(1.010);
+    background-color: rgba(0, 0, 0, 0.575);
+    background-blend-mode: darken;
+    box-shadow: 0 0 15px var(--destacar-primario);
+}
+
+.titulo-imagen{
+    display: flex;
+    font-size: clamp(14px, 1.5vw, 30px);
+    color: var(--destacar-primario);
+    font-weight: bold;
+    text-shadow: 5px 5px 15px rgba(0,0,0);
+    padding: 3%;
+    font-family: "Eater", serif;
+    border-bottom: 1px solid var(--destacar-primario);
+    justify-content: center;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.712), transparent);
+    backdrop-filter: blur(6px);
+}
+
+.decoracion-categorias {
+    background: var(--degradado-primario);
+}

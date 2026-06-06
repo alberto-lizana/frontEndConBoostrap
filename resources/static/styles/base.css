@@ -1,6 +1,6 @@
 :root {
     --bg-principal: #f5f7ff;
-    --bg-secundario: #dfe7ff;
+    --bg-secundario: #dee4f8;
     --destacar-primario: rgb(123, 97, 255);
     --texto-principal: #1b1d2b;
     --texto-blanco: #f5f7ff;
@@ -21,6 +21,18 @@ body {
     background-color: var(--bg-principal);
     color: var(--texto-principal);
     min-height: 100vh;
+}
+
+.color-letra-dinamico {
+    color: var(--texto-principal)
+}
+
+.subtitulo{
+    color: var(--destacar-primario);
+}
+
+.descripcion {
+    color: var(--texto-blanco);
 }
 
 a {
@@ -64,3 +76,18 @@ input:-webkit-autofill:active {
     backdrop-filter: blur(5px);
 }
 
+.btn-bd-primary {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 0 10px var(--destacar-primario);
+    color: var(--texto-blanco);
+}
+
+.btn-bd-primary:hover {
+    box-shadow: 0 0 15px var(--destacar-primario);
+    filter: brightness(1.50);
+    transform: scale(1.03);
+    backdrop-filter: blur(5px);
+}

@@ -1,1 +1,581 @@
-<a href="../inicio_sesion.html"> Estas en incio_user, Volver a iniciar sesion </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+        
+    <!-- BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- API GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- LETRA NAV -->
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+
+    <!-- LETRA NORMAL -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- LOGO TIENDA -->
+    <link rel="icon" type="image/png" href="../../static/img/logo_tienda_sf.png">
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="../../static/styles/footer.css">
+
+    <!-- l&d CSS -->
+    <link rel="stylesheet" href="../../static/styles/l&d.css">
+    
+    <!-- NAV CSS -->
+    <link rel="stylesheet" href="../../static/styles/nav.css">
+
+    <!-- BASE CSS -->
+    <link rel="stylesheet" href="../../static/styles/base.css">
+
+    <!-- HOME CSS -->
+    <link rel="stylesheet" href="../../static/styles/acordeon.css">
+
+    <!-- HOME CSS -->
+    <link rel="stylesheet" href="../../static/styles/home.css">
+
+</head>
+<body>
+    <!-- NAVEGADOR COMPLETO -->
+    <nav class="contenedor" id="nav"> 
+        <!-- CONTENEDOR PARA IMAGEN DE MARCA EN EL NAV -->
+        <div class="marca">
+            <div class="img-logo" alt="Logo de la tienda Jumanji">
+            </div>
+        </div>
+        
+        <!-- NAVEGADOR PARTE INTERACTIVA -->
+        <div class="nav-interactivo" id="nav-interactivo">
+
+            <!-- INICIO --> 
+            <li class="nav-items">
+                <a href="../../templates/user/inicio_user.html"> 
+                    <span class="letras-nav"> Inicio </span>
+                    <i class="fa-solid fa-house iconos-nav"></i>
+                </a>
+            </li>
+
+            <!-- CATEGORIAS -->
+            <li class="nav-items" id="boton-submenu"> 
+                <a href="javascript:void(0)"> 
+                    <span class="letras-nav"> Categorias </span>
+                    <i class="fa-solid fa-table-list iconos-nav"></i>
+                </a> 
+                <!-- SUBMENU CATEGORIAS -->
+                <div class="submenu-categorias" id= "submenu-categorias">
+                    <ul class="submenu-categorias-lista">
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/estrategia.html"> 
+                                <span class="letras-nav-submenu"> Estrategia </span>
+                                <i class="fa-solid fa-chess iconos-nav-submenu"></i>
+                            </a>
+                        </li>
+
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/cooperativos.html"> 
+                                <span class="letras-nav-submenu"> Cooperativos </span>
+                                <i class="fa-solid fa-handshake iconos-nav-submenu"></i>
+                            </a> 
+                        </li>
+
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/rol.html">
+                                <span class="letras-nav-submenu"> Rol </span>
+                                <i class="fa-solid fa-masks-theater iconos-nav-submenu"></i>
+                            </a>
+                        </li>
+                                            
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/casual.html"> 
+                                <span class="letras-nav-submenu"> Casual </span>   
+                                <i class="fa-solid fa-dice-five iconos-nav-submenu"></i>    
+                            </a>                                      
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- CONTACTO -->
+            <li class="nav-items">
+                <a href="#footer_contacto"> 
+                    <span class="letras-nav">Contacto</span>
+                    <i class="fa-solid fa-circle-user iconos-nav"></i>
+                </a>
+            </li>
+            
+            
+            <!-- CARRITO -->
+            <li class="nav-items">
+                <a href="#">
+                    <span class="letras-nav">Carrito</span>
+                    <i class="fa-solid fa-cart-shopping iconos-nav"></i>
+                </a>
+            </li>
+        </div>
+
+        <!-- ICONO RESPONSIVE -->
+        <div class="icono-responsive m-3" id="nav-responsive-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav> 
+
+     <!-- SECCION IMAGEN PRESENTACION -->
+     <section class="ms-2 me-2">
+        <div class="contenedor-img">
+
+            <div class= "d-flex justify-content-end m-3">
+                <!-- Example single danger button -->
+                <div class="btn-group me-4">
+                    <button type="button" class="btn dropdown-toggle btn-bd-primary letra-normal p-2 d-block text-center ms-" data-bs-toggle="dropdown" aria-expanded="false">
+                        Perfil
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Modificar</a></li>
+                        <li><a class="dropdown-item" href="#">Historial</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SECCION MODO LIGHT & DARK -->
+            <div class="contenedor-icons-switch m-4 ">
+                <i class="fa-solid fa-sun iconos-ld-izquierda descripcion"></i>
+                    <label class="switch"> 
+                        <input type="checkbox" id="l&d-input">
+                        <span class="slider round"></span>
+                    </label>
+                <i class="fa-solid fa-moon iconos-ld-derecha descripcion"></i>
+            </div>
+
+        </div>
+     </section>
+
+    <main class="main-class row">
+
+        <!-- ACORDEEON PARA PRESENTACION DE LA PROPUESTA -->
+        <section class="mt-5 mb-5">
+            <div class="accordion accordion-jumanji mb-3" id="accordionFlushExample">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            ¿Quienes somos?
+                        </button>
+                    </h2>
+
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                        <div class="accordion-body">
+                            <br>
+                            <hr>
+                            <p>
+                                En Jumanji somos una tienda chilena apasionada por los juegos de mesa y las experiencias que estos crean alrededor de una mesa. Creemos que cada partida es una oportunidad para compartir, aprender, competir y construir recuerdos inolvidables junto a amigos y familiares.
+                            </p>
+
+                            <p>
+                                Nuestro objetivo es acercar el mundo de los juegos de mesa a jugadores de todos los niveles, ofreciendo una selección cuidadosamente elegida de títulos de estrategia, cooperativos, rol y juegos casuales para cada tipo de aventura.
+                            </p>
+
+                            <p>
+                                Realizamos envíos a todo Chile, permitiendo que personas de cualquier región puedan descubrir nuevos desafíos, explorar mundos fascinantes y disfrutar de la magia de los juegos de mesa desde la comodidad de su hogar.
+                            </p>
+
+                            <p>
+                                Más que una tienda, buscamos ser una comunidad para quienes disfrutan reunirse, desconectarse de las pantallas y vivir grandes historias alrededor de un tablero.
+                            </p>
+                            <hr>
+
+                            <p class="fw-bold text-center mt-4 subtitulo">
+                                Jumanji: cada partida es una nueva aventura.
+                            </p>
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Nuestra Misión
+                        </button>
+                    </h2>
+
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                        <div class="accordion-body">
+                            <br>
+                            <hr>
+                            <p>
+                                Nuestra misión es acercar el mundo de los juegos de mesa a personas de todas las edades y niveles de experiencia. Buscamos ofrecer una selección de juegos capaz de reunir a amigos, familias y comunidades en torno a experiencias memorables, donde la diversión, la creatividad y la estrategia sean protagonistas.
+                            </p>
+
+                            <p>
+                                Creemos que cada juego tiene el poder de conectar personas, fortalecer vínculos y crear momentos únicos. Por ello, trabajamos para que cada cliente encuentre una aventura que se adapte a sus gustos y forme parte de recuerdos que perduren en el tiempo.
+                            </p>
+
+                            <p>
+                                En Jumanji no solo vendemos juegos; compartimos una pasión por las historias, los desafíos y las experiencias que nacen alrededor de una mesa.
+                            </p>
+                            <hr>
+
+                            <p class="fw-bold text-center mt-4 subtitulo">
+                                Jumanji: cada partida es una nueva aventura.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            ¿Por qué elegir juegos de mesa?
+                        </button>
+                    </h2>
+
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <br>
+                            <hr>
+                            <p>
+                                Queremos que la emoción de descubrir un nuevo juego de mesa llegue a cualquier rincón del país. Por eso realizamos envíos a todo Chile, permitiendo que jugadores de distintas regiones puedan acceder a nuestro catálogo de manera rápida y segura.
+                            </p>
+
+                            <p>
+                                Ya sea que vivas en una gran ciudad o en una localidad más apartada, nuestro compromiso es acercarte nuevas experiencias de juego y hacer que tu próxima aventura esté a solo unos pasos de distancia.
+                            </p>
+
+                            <p>
+                                Porque creemos que la pasión por los juegos de mesa no tiene fronteras, trabajamos para que cada tablero, carta y dado pueda encontrar su lugar en hogares de todo el país.
+                            </p>
+                            <hr>
+
+                            <p class="fw-bold text-center mt-4 subtitulo">
+                                Jumanji: cada partida es una nueva aventura.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CETEGORIA ESTRATEGIA -->
+        <section class="contenedor-secundario info-categoria col-12 mb-3">
+            <a href="../../templates/user/estrategia.html" class="contenedor-img-img">
+                    <div class="contenedor-img-estrategia ">
+                        
+                        <div class="titulo-imagen">
+                            Estrategia
+                        </div>   
+
+                        <div class="row p-4 decoracion-categorias">
+                            <div class="col-md-4 col-sm-12"> 
+
+                                <h4 class="letra-especial subtitulo"> Características </h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Planificación a largo plazo
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Toma de decisiones constante
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Partidas de duración media o larga
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Premia la habilidad sobre el azar
+                                </p>
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+
+                                <h4 class="letra-especial subtitulo">  Descripción </h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Juegos que requieren planificación, toma de decisiones y pensamiento estratégico para superar desafíos y alcanzar objetivos específicos.
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+                                <h4 class="letra-especial subtitulo">Espíritu</h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Planifica cada movimiento, anticipa a tus rivales y domina el tablero. La victoria comienza mucho antes del primer turno.
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>    
+
+        <!-- CETEGORIA COOPERATIVOS -->
+        <section class="contenedor-principal info-categoria col-12 mb-3">
+            <a href="../../templates/user/cooperativos.html" class="contenedor-img-img">
+                <div class="contenedor-img-estrategia">
+                
+                    <div class="contenedor-img-cooperativos">
+                        
+                        <div class="titulo-imagen">
+                            Cooperativos
+                        </div>
+                        
+                        <div class="row p-4 decoracion-categorias">
+                            <div class="col-md-4 col-sm-12"> 
+
+                                <h4 class="letra-especial subtitulo"> Características </h4>
+
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Trabajo en equipo
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Comunicación entre jugadores
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Objetivo común compartido
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Desafíos contra el juego
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                    Ideal para grupos y familias
+                                </p>
+
+                            
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+
+                                <h4 class="letra-especial subtitulo"> Descripción </h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Juegos de mesa en los que los jugadores trabajan juntos para lograr un objetivo común, enfrentándose a desafíos y tomando decisiones colaborativas para superar obstáculos y ganar como equipo.
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+                                <h4 class="letra-especial subtitulo">Espíritu</h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Ningún héroe salva el mundo solo. Une fuerzas, comparte decisiones y enfrenten juntos lo desconocido.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </section>       
+
+        <!-- CETEGORIA ROL -->
+        <section class="contenedor-secundario info-categoria col-12 mb-3">
+                <a href="../../templates/user/rol.html" class="contenedor-img-img"> 
+                    <div class="contenedor-img-estrategia">
+                        <div class="contenedor-img-rol">
+                            
+                            <div class="titulo-imagen">
+                                Rol
+                            </div>
+
+                            <div class="row p-4 decoracion-categorias">
+
+                                <div class="col-md-4 col-sm-12"> 
+
+                                    <h4 class="letra-especial subtitulo"> Características </h4>
+
+                                    <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                        Interpretación de personajes
+                                    </p>
+                                    <p class="letra-normal letra-normal-bold descripcion">
+                                        Narrativas inmersivas
+                                    </p>
+                                    <p class="letra-normal letra-normal-bold descripcion"> 
+                                        Aventuras y exploración
+                                    </p>
+                                    <p class="letra-normal letra-normal-bold descripcion"> 
+                                        Uso frecuente de dados
+                                    </p>
+                                    <p class="letra-normal letra-normal-bold descripcion"> 
+                                        Gran libertad creativa
+                                    </p>
+                                
+
+                                </div>
+
+                                <div class="col-md-4 .col-sm-12"> 
+
+                                    <h4 class="letra-especial subtitulo"> Descripciòn </h4>
+                                    <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                        Juegos de mesa diseñados para ser fáciles de aprender y jugar, con reglas simples y partidas rápidas, ideales para jugadores ocasionales o aquellos que buscan una experiencia de juego más relajada.
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-4 .col-sm-12"> 
+                                    <h4 class="letra-especial subtitulo">Espíritu</h4>
+
+                                    <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                        Forja tu leyenda, interpreta a tu personaje y vive aventuras que solo existen en la imaginación de tu grupo.
+                                    </p>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </a>
+        </section>
+
+        <!-- CETEGORIA CASUAL -->
+        <section class="contenedor-principal info-categoria col-12 mb-3">
+            <a href="../../templates/user/casual.html" class="contenedor-img-img"> 
+                <div class="contenedor-img-estrategia">
+                    <div class="contenedor-img-casual">
+                        
+                        <div class="titulo-imagen">
+                            Casual
+                        </div>
+
+                        <div class="row p-4 decoracion-categorias">
+                            <div class="col-md-4 col-sm-12"> 
+
+                                <h4 class="letra-especial subtitulo"> Características </h4>
+
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                        Reglas sencillas 
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                        Partidas rápidas
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                        Fácil de aprender
+                                </p>
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                        Diversión inmediata
+                                </p>                                
+                                <p class="letra-normal letra-normal-bold descripcion">
+                                        Perfecto para reuniones sociales
+                                </p>                                    
+                                        
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+                                
+                                <h4 class="letra-especial subtitulo"> Descripciòn </h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Juegos de mesa diseñados para ser fáciles de aprender y jugar, con reglas simples y partidas rápidas, ideales para jugadores ocasionales o aquellos que buscan una experiencia de juego más relajada.
+                                </p>
+
+                            </div>
+
+                            <div class="col-md-4 .col-sm-12"> 
+                                <h4 class="letra-especial subtitulo">Espíritu</h4>
+                                <p class="letra-normal letra-normal-bold descripcion pt-3">
+                                    Fáciles de aprender, rápidos de jugar y perfectos para transformar cualquier reunión en un momento inolvidable.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </section>     
+
+    </main>
+
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="footer p-4">
+
+        <div class="footer-contenido">
+
+            <div class="footer-columna">
+                <ul>
+                    <li class="letra-especial subtitulo" id="footer_contacto">Contacto</li>
+                    
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Correo</a>
+                    </li>
+
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Teléfono</a>
+                    </li>
+
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Dirección</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <ul>
+                    <li class="letra-especial subtitulo">Redes</li>
+
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="" class="letra-normal color-letra-dinamico">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <ul>
+
+                    <li class="letra-especial subtitulo">Comunidad</li> 
+
+                    <li>
+                        <a href="#" class="letra-normal color-letra-dinamico">Grupo WhatsApp</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="letra-normal color-letra-dinamico">Discord</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="letra-normal color-letra-dinamico">Eventos</a>
+                    </li>
+                </ul>                
+            </div>
+
+        </div>
+
+        <div class="letra-especial subtitulo text-center copyright p-3">
+            <h4>Copyright © 2026 Jumanji. Todos los derechos reservados.</h4>
+        </div>
+    </footer>
+ 
+    <!-- BOOSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    
+    <!-- JS LIGHT AND DARK -->
+    <script src="../../static/js/l&d.js"></script>
+
+    <!-- NAV JS -->
+     <script src="../../static/js/nav.js"></script> 
+
+    <!-- CERRAR SESION JS -->
+     <script src="../../static/js/cerrar_sesion.js"></script> 
+</body>
+</html>
