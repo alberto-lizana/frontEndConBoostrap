@@ -1,20 +1,142 @@
-<a href="inicio_user.html"> Estas en Casual, aprieta para volver a Home </a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Casual</title>
 
-
-
-
-
-
-
+    <!-- BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
+    <!-- API GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- LETRA NAV -->
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+
+    <!-- LETRA NORMAL -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- LOGO TIENDA -->
+    <link rel="icon" type="image/png" href="../../static/img/logo_tienda_sf.png">
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="../../static/styles/footer.css">
+
+    <!-- l&d CSS -->
+    <link rel="stylesheet" href="../../static/styles/l&d.css">
+    
+    <!-- NAV CSS -->
+    <link rel="stylesheet" href="../../static/styles/nav.css">
+
+    <!-- BASE CSS -->
+    <link rel="stylesheet" href="../../static/styles/base.css">
+
+    <!-- CATEGORIA CSS -->
+    <link rel="stylesheet" href="../../static/styles/categoria.css">
+</head>
+<body  data-categoria="Casual">
+    <!-- NAVEGADOR COMPLETO -->
+    <nav class="contenedor" id="nav"> 
+        <!-- CONTENEDOR PARA IMAGEN DE MARCA EN EL NAV -->
+        <div class="marca">
+            <div class="img-logo" alt="Logo de la tienda Jumanji">
+            </div>
+        </div>
+        
+        <!-- NAVEGADOR PARTE INTERACTIVA -->
+        <div class="nav-interactivo" id="nav-interactivo">
+
+            <!-- INICIO --> 
+            <li class="nav-items">
+                <a href="../../templates/user/inicio_user.html"> 
+                    <span class="letras-nav"> Inicio </span>
+                    <i class="fa-solid fa-house iconos-nav"></i>
+                </a>
+            </li>
+
+            <!-- CATEGORIAS -->
+            <li class="nav-items" id="boton-submenu"> 
+                <a href="javascript:void(0)"> 
+                    <span class="letras-nav"> Categorias </span>
+                    <i class="fa-solid fa-table-list iconos-nav"></i>
+                </a> 
+                <!-- SUBMENU CATEGORIAS -->
+                <div class="submenu-categorias" id= "submenu-categorias">
+                    <ul class="submenu-categorias-lista">
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/estrategia.html"> 
+                                <span class="letras-nav-submenu"> Estrategia </span>
+                                <i class="fa-solid fa-chess iconos-nav-submenu"></i>
+                            </a>
+                        </li>
+
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/cooperativos.html"> 
+                                <span class="letras-nav-submenu"> Cooperativos </span>
+                                <i class="fa-solid fa-handshake iconos-nav-submenu"></i>
+                            </a> 
+                        </li>
+
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/rol.html">
+                                <span class="letras-nav-submenu"> Rol </span>
+                                <i class="fa-solid fa-masks-theater iconos-nav-submenu"></i>
+                            </a>
+                        </li>
+                                            
+                        <li class="submenu-categorias-item">
+                            <a href="../../templates/user/casual.html"> 
+                                <span class="letras-nav-submenu"> Casual </span>   
+                                <i class="fa-solid fa-dice-five iconos-nav-submenu"></i>    
+                            </a>                                      
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- CONTACTO -->
+            <li class="nav-items">
+                <a href="#footer_contacto"> 
+                    <span class="letras-nav">Contacto</span>
+                    <i class="fa-solid fa-circle-user iconos-nav"></i>
+                </a>
+            </li>
+            
+            
+            <!-- CARRITO -->
+            <li class="nav-items">
+                <a href="#">
+                    <span class="letras-nav">Carrito</span>
+                    <i class="fa-solid fa-cart-shopping iconos-nav"></i>
+                </a>
+            </li>
+        </div>
+
+        <!-- ICONO RESPONSIVE -->
+        <div class="icono-responsive m-3" id="nav-responsive-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav> 
+
+
+    <main>
+        <section>
+            <div class="productos tabla-productos" id="juegosContainer">
+
+            </div>                
+        </section>
+    </main>
+
+
+
+
+
+
     <!-- FOOTER COMPLETO -->
     <footer class="footer p-4">
 
@@ -85,9 +207,15 @@
     <script src="../../static/js/l&d.js"></script>
 
     <!-- NAV JS -->
-     <script src="../../static/js/nav.js"></script> 
+    <script src="../../static/js/nav.js"></script> 
 
     <!-- CERRAR SESION JS -->
-     <script src="../../static/js/cerrar_sesion.js"></script> 
+    <script src="../../static/js/cerrar_sesion.js"></script> 
+
+    <!-- CARGAR CATEGORÍA CARDS -->
+    <script src="../../static/js/cargar_categoria_cards.js"></script> 
+    
+    <!-- CARGAR CATEGORÍA CARDS -->
+    <script type="module" src="../../static/js/cargar_categoria_cards.js"></script>
 </body>
 </html>
