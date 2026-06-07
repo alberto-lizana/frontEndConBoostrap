@@ -11,6 +11,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     verCarrito(carrito);
 
+    btnPagar.addEventListener('click', () => {
+
+        const carrito = getCarrito(claveCarrito);
+        let precioFinal = 0;
+
+        carrito.forEach((item) => {
+        precioFinal += ((item.precio - (item.precio * item.descuento)) * item.cantidad);
+
+        });
+
+        alert(`Compra realizada con éxito\n Total pagado: $${precioFinal.toFixed(0)}`);
+        
+        /* ACA SI QUEREMOS GUARDAR HISTORIAL COMO PUSE EN EL PERFIL TENDRIAMOS QUE CREAR LA LOGICA*/
+        localStorage.removeItem(claveCarrito);
+         verCarrito([]);
+
+    });
+
     function mostrarCarrito(carrito) {
         const contenedor = document.getElementById('carritoContainer');
         contenedor.innerHTML = '';
@@ -99,41 +117,43 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
             contenedor.appendChild(producto);
-            
-            contenedor.querySelectorAll('.aumentar').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const id = btn.dataset.id;
-                    const producto = carrito.find(p => p.id == id);
+                     
+        })
+        contenedor.querySelectorAll('.aumentar').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.id;
+                const producto = carrito.find(p => p.id == id);
 
-                    if (producto) {
-                        producto.cantidad++;
-                    }
+                if (producto) {
+                    producto.cantidad++;
+                }
 
-                    localStorage.setItem(claveCarrito, JSON.stringify(carrito));
-                    verCarrito(carrito);
-                });
+                localStorage.setItem(claveCarrito, JSON.stringify(carrito));
+                verCarrito(carrito);
             });
+        });
 
-            contenedor.querySelectorAll('.disminuir').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const id = btn.dataset.id;
+        contenedor.querySelectorAll('.disminuir').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.id;
 
-                    const producto = carrito.find(p => p.id == id);
+                const producto = carrito.find(p => p.id == id);
 
-                    if (producto) {
-                        producto.cantidad--;
+                if (producto) {
+                    producto.cantidad--;
 
-                        if (producto.cantidad <= 0) {
-                            const indice = carrito.findIndex(p => p.id == id);
-                            carrito.splice(indice, 1);
-                        }
+                    if (producto.cantidad <= 0) {
+                        const indice = carrito.findIndex(p => p.id == id);
+                        carrito.splice(indice, 1);
                     }
+                }
+                localStorage.setItem(claveCarrito, JSON.stringify(carrito));
+                verCarrito(carrito);
+            });
+        });   
+    
+    };
 
-                    localStorage.setItem(claveCarrito, JSON.stringify(carrito));
-                    verCarrito(carrito);
-                });
-            });            
-        })};
 
     function agregaProductos() {
         if (!agregaProductosContainer) return; 
