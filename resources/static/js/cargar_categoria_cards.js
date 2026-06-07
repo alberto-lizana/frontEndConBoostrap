@@ -1,5 +1,7 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios/dist/esm/axios.min.js';
+
 document.addEventListener("DOMContentLoaded", async () => {
+    
     const rutaImagenes = "../../static/img/"
     const categoria = document.body.dataset.categoria;
     const productos = await obtenerProductos();

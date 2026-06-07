@@ -44,7 +44,7 @@
     color: var(--texto-blanco);
 }
 
-.ventanaCrearUsuario {
+.ventanaCrearUsuario, .ventanaRecuperarContresena {
     position: fixed;
     inset: 0;
     display: flex;
@@ -57,11 +57,16 @@
     perspective: 1400px;
 }
 
-.ventanaCrearUsuario.activo {
+
+.ventanaCrearUsuario.activo{
     opacity: 1;
     pointer-events: auto;
 }
 
+.ventanaRecuperarContresena.activo {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .carta-scene {
     transform-style: preserve-3d;
@@ -95,6 +100,14 @@
     opacity: 1;
 }
 
+.ventanaRecuperarContresena.activo .carta-juego {
+    transform:
+        translateY(0px)
+        translateZ(0px)
+        rotateX(0deg)
+        scale(1);
+    opacity: 1;
+}
 
 @media (max-width: 425px) {
     .container-img-inicio-sesion{

@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="row-12 text-center mb-3">
-                            <a href="recuperar_contrasenia.html" class="recuperar-pass-a">
+                            <a class="recuperar-pass-a" id="botonRecuperarPass">
                                 ¿Ha olvidado su contraseña?
                             </a>
                         </div>
@@ -104,6 +104,7 @@
             </div>
         </section>
 
+        <!-- CREAR USUARIO FORM -->
         <section>
             <div class="ventanaCrearUsuario" id="ventanaCrearUsuario">
                 <div class="carta-juego p-3">
@@ -175,6 +176,55 @@
             </div>
         </section>
 
+        <!-- RECUPERAR CONTRASEÑA FORM -->
+        <section>
+            <div class="ventanaRecuperarContresena" id="ventanaRecuperarContresena">
+                <div class="carta-juego p-3">
+
+                    <div class="carta-header-juego text-center mt-3">
+                        <div class="letra-especial"> RECUPERAR PERSONAJE </div>
+                        <div class="letra-normal"></div>
+                    </div>
+
+                    <form class="carta-body-juego" id="formOlvidador">
+
+                        <div class="mb-4">
+                            <label for="nombreDelOlvidador" class="form-label letra-normal letra-normal-bold">Nombre</label>
+                            <input type="text"  id="nombreDelOlvidador" name="nombreDelOlvidador" class="input-transparente letra-normal w-100" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="mb-4 row">
+
+                            <div class="col-12">
+                                <label for="apellidoPaternoDelOlvidador" class="form-label letra-normal letra-normal-bold">Apellido Paterno</label>
+                                <input type="text" id="apellidoPaternoDelOlvidador" name="apellidoPaternoDelOlvidador" class="input-transparente letra-normal w-100" placeholder="Apellido Paterno" required>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="emailDelOlvidador" class="form-label letra-normal letra-normal-bold">Email</label>
+                            <input type="email" id="emailDelOlvidador" name="emailDelOlvidador" class="input-transparente letra-normal w-100 m-1" placeholder="tuemail@correo.com" required>
+                        </div>
+
+
+                        <div class="row-12 text-center mb-3">
+                            <button type="submit" class="btn-bd-primary letra-normal p-2 w-100 d-block text-center" id="botonOlvidador">
+                                Recuperar
+                            </button>
+                        </div>
+
+                        <div class="row-12 text-center mb-3">
+                            <button class="btn-bd-primary letra-normal p-2 w-100 text-center d-block" type="button" id="cerrarOlvidador">
+                                Cerrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <!-- BOOSTRAP -->
@@ -187,6 +237,7 @@
     <!-- MODULES -->
     <script type="module" src="../static/js/inicio_sesion.js"></script>
     <script type="module" src="../static/js/form_crear_cuenta.js"></script>
+    <script type="module" src="../static/js/recuperar_contrasena.js"></script>
 </body>
 </html>
 

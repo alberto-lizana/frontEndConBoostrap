@@ -25,11 +25,11 @@ export const normalizarString = (str) => str.trim().toLowerCase();
 
 export const normalizarStringDic = (dic) => ({
     ...dic,
-    nombre: dic.nombre.trim().toLowerCase(),
-    appat: dic.appat.trim().toLowerCase(),
-    apmat: dic.apmat.trim().toLowerCase(),
-    email: dic.email.trim().toLowerCase(),
-    contrasena: dic.contrasena.trim(),
+    nombre: dic.nombre?.trim().toLowerCase(),
+    appat: dic.appat?.trim().toLowerCase(),
+    apmat: dic.apmat?.trim().toLowerCase(),
+    email: dic.email?.trim().toLowerCase(),
+    contrasena: dic.contrasena?.trim(),
     r_contrasena: dic.r_contrasena?.trim(),
-    direccion: dic.direccion.trim().toLowerCase()
+    direccion: dic.direccion?.trim().toLowerCase()
 });
