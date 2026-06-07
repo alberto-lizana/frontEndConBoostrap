@@ -1,25 +1,16 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios/dist/esm/axios.min.js';
+import { getProductos, agregarAlCarrito } from './storage.js';
 
 document.addEventListener("DOMContentLoaded", async () => {
     
     const rutaImagenes = "../../static/img/"
     const categoria = document.body.dataset.categoria;
-    const productos = await obtenerProductos();
+    const productos = await getProductos();
 
     if (!productos) return;
 
     mostrarJuegos(productos[categoria]);
 
-
-    async function obtenerProductos() {
-        try {
-            const response = await axios.get("../../static/JSON/producto/todos.json");
-            return response.data;
-        } catch (error) {
-            console.error("Error al cargar productos:", error);
-            return null;
-        }
-    }
 
     function mostrarJuegos(juegos) {
         const contenedor = document.getElementById('juegosContainer');
@@ -79,7 +70,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </button>
             `;
 
-            contenedor.appendChild(producto);
+            const btnagregarACarrito = producto.querySelector('.btn-comprar');
+
+            btnagregarACarrito.addEventListener('click', () => {
+                console.log(juego);
+                agregarAlCarrito(juego);
+            });
+
+        contenedor.appendChild(producto);
+
         });
 
 }});    

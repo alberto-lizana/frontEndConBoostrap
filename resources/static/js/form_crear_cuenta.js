@@ -1,6 +1,6 @@
 import { 
     validarNombre, validarApellido, validarEmail, 
-    validarContrasena, normalizarStringDic, limpiarFormulario 
+    validarContrasena, normalizarStringDic, limpiarFormulario
 } from './funciones_reutilizables.js'
 
 import { getUsuarios, guardarUsuario } from './storage.js';

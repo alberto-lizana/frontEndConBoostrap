@@ -6,11 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const iniciarSesionForm = document.getElementById("iniciarSesionForm");
     const emailUser = document.getElementById("emailUser");
     const contrasenaUser = document.getElementById("contrasenaUser");
-
     const administrador = await getAdmin();
-    const cuentasCreadas = await getUsuarios();
 
-    iniciarSesionForm.addEventListener('submit', (e) => {
+
+    iniciarSesionForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         if (!validarEmail(emailUser.value)) {
@@ -39,8 +38,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
     
+        const usuarios = await getUsuarios();
 
-        const user = cuentasCreadas.find(
+        const user = usuarios.find(
             item => item.email === data.email && item.contrasena === data.contrasena
         );
 

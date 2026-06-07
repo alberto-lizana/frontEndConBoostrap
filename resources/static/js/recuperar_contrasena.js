@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cerrarOlvidador = document.getElementById("cerrarOlvidador");
     const formOlvidador = document.getElementById("formOlvidador");
 
-    let cuentasCreadas = await getUsuarios();
 
     botonRecuperarPass.addEventListener('click', () => {
         ventanaRecuperarContresena.classList.add("activo");
@@ -32,13 +31,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         const nombreDelOlvidador = document.getElementById("nombreDelOlvidador");
         const apellidoPaternoDelOlvidador = document.getElementById("apellidoPaternoDelOlvidador");
         const emailDelOlvidador = document.getElementById("emailDelOlvidador");
-
         
         const data = normalizarStringDic ({
             "nombre": nombreDelOlvidador.value, 
             "appat": apellidoPaternoDelOlvidador.value,
             "email": emailDelOlvidador.value
         })
+
+        const cuentasCreadas = await getUsuarios();
 
         const user = cuentasCreadas.find(
             item => item.nombre === data.nombre && item.appat === data.appat && item.email === data.email
