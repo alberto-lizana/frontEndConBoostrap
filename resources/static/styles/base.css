@@ -82,12 +82,16 @@ input:-webkit-autofill:active {
     cursor: pointer;
     background-color: transparent;
     box-shadow: 0 0 10px var(--destacar-primario);
-    color: var(--texto-blanco);
+    color: var(--destacar-primario);
 }
 
 .btn-bd-primary:hover {
     box-shadow: 0 0 15px var(--destacar-primario);
-    filter: brightness(1.50);
     transform: scale(1.03);
     backdrop-filter: blur(5px);
+    color: var(--destacar-primario);
+}
+
+.btn-bd-primary:focus {
+    color: var(--destacar-primario);
 }

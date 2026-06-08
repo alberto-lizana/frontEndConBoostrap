@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 })
             );
 
-            window.location.href = '../templates/admin/inicio_admin.html';
+            window.location.href = '../templates/admin/home_admin.html'; 
             return;
         }
     

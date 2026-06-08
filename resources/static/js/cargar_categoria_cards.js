@@ -71,10 +71,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
             const btnagregarACarrito = producto.querySelector('.btn-comprar');
-
+            
             btnagregarACarrito.addEventListener('click', () => {
-                console.log(juego);
+
                 agregarAlCarrito(juego);
+
+                const textoOriginal = btnagregarACarrito.textContent;
+
+                btnagregarACarrito.textContent = "✓ Agregado";
+                btnagregarACarrito.style.backgroundColor = "green";
+                btnagregarACarrito.disabled = true;
+
+                setTimeout(() => {
+                    btnagregarACarrito.textContent = textoOriginal;
+                    btnagregarACarrito.style.backgroundColor = "";
+                    btnagregarACarrito.disabled = false;
+                }, 1000);
             });
 
         contenedor.appendChild(producto);

@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             producto.classList.add('producto');
 
             producto.innerHTML = `
+            <hr>
                 <div class="row p-3 mb-4 rounded align-items-center contorno">
 
                     <div class="col-12 col-md-3 text-center mb-3 mb-md-0">
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         </div>
                     </div>
                 </div>
+                <hr>
             `;
 
             contenedor.appendChild(producto);

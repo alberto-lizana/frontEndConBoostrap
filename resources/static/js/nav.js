@@ -1,9 +1,11 @@
+import {protegerUrlUser} from './funciones_reutilizables.js'
 document.addEventListener("DOMContentLoaded", () => {
     const btoSubmenu = document.getElementById("boton-submenu");
     const submenu = document.getElementById("submenu-categorias");
     const btoResponsive = document.getElementById("nav-responsive-icon");
     const menu = document.getElementById("nav-interactivo");
 
+    protegerUrlUser();
 
     btoSubmenu.addEventListener('click', (ev) => {
         ev.stopPropagation(); 

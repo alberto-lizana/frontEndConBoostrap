@@ -33,3 +33,27 @@ export const normalizarStringDic = (dic) => ({
     r_contrasena: dic.r_contrasena?.trim(),
     direccion: dic.direccion?.trim().toLowerCase()
 });
+
+export function protegerUrlUser(){
+    const sesion = JSON.parse(sessionStorage.getItem("sesion"));
+    
+    if(!sesion || !sesion.logueado){
+    
+        window.location.href = '../inicio_sesion.html';
+        return;
+    }
+} 
+
+export function protegerUrlAdmin(){
+    const sesion = JSON.parse(sessionStorage.getItem("sesion"));
+
+    if (!sesion || !sesion.logueado) {
+        window.location.href = '../inicio_sesion.html';
+        return;
+    }
+
+    if (sesion.user.rol !== 'admin') {
+        window.location.href = '../user/inicio_user.html';
+        return;
+    }
+} 

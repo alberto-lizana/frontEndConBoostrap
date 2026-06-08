@@ -44,6 +44,7 @@
 
 </head>
 <body>
+
     <!-- NAVEGADOR COMPLETO -->
     <nav class="contenedor p-3" id="nav"> 
         <!-- CONTENEDOR PARA IMAGEN DE MARCA EN EL NAV -->
@@ -131,19 +132,29 @@
      <section class="ms-2 me-2">
         <div class="contenedor-img">
 
-            <div class= "d-flex justify-content-end m-3">
-                <!-- Example single danger button -->
-                <div class="btn-group me-4">
-                    <button type="button" class="btn dropdown-toggle btn-bd-primary letra-normal p-2 d-block text-center ms-" data-bs-toggle="dropdown" aria-expanded="false">
-                        Perfil
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Modificar</a></li>
-                        <li><a class="dropdown-item" href="#">Historial</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesion</a></li>
-                    </ul>
+            <div class="row m-3">
+
+                <!-- VOLVER VISTA ADMIN -->
+                <div class="col-6">
+                    <div id="volverVistaAdmin"></div>
                 </div>
+
+                <div class="col-6 d-flex justify-content-end">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle btn-bd-primary letra-normal p-2 color-letra-dinamico" data-bs-toggle="dropdown" aria-expanded="false">
+                            Perfil
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <li><a class="dropdown-item" href="#">Modificar</a></li>
+                            <li><a class="dropdown-item" href="#">Historial</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
             <!-- SECCION MODO LIGHT & DARK -->
@@ -573,9 +584,12 @@
     <script src="../../static/js/l&d.js"></script>
 
     <!-- NAV JS -->
-     <script src="../../static/js/nav.js"></script> 
+    <script type="module" src="../../static/js/nav.js"></script> 
 
     <!-- CERRAR SESION JS -->
-     <script src="../../static/js/cerrar_sesion.js"></script> 
+    <script src="../../static/js/cerrar_sesion.js"></script> 
+
+    <!-- NAV ADMIN -->
+    <script type="module" src="../../static/js/vista_usuario_admin.js"></script> 
 </body>
 </html>
