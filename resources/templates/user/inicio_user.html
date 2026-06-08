@@ -36,6 +36,9 @@
     <!-- BASE CSS -->
     <link rel="stylesheet" href="../../static/styles/base.css">
 
+    <!-- VENTANAS EMERGENTE -->
+    <link rel="stylesheet" href="../../static/styles/ventanas_emergentes.css">
+
     <!-- ACORDEON CSS -->
     <link rel="stylesheet" href="../../static/styles/acordeon.css">
 
@@ -47,6 +50,8 @@
 
     <!-- NAVEGADOR COMPLETO -->
     <nav class="contenedor p-3" id="nav"> 
+
+
         <!-- CONTENEDOR PARA IMAGEN DE MARCA EN EL NAV -->
         <div class="marca">
             <div class="img-logo" alt="Logo de la tienda Jumanji">
@@ -147,7 +152,7 @@
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Ver</a></li>
-                            <li><a class="dropdown-item" href="#">Modificar</a></li>
+                            <li><a class="dropdown-item" id="modificarPerfil" href="#">Modificar</a></li>
                             <li><a class="dropdown-item" href="#">Historial</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesión</a></li>
@@ -171,6 +176,98 @@
      </section>
 
     <main class="main-class row">
+
+        <!-- MODIFICAR PERSONAJE -->
+        <section>
+            <div class="ventanaModificarPerfil" id="ventanaModificarPerfil">
+                <div class="carta-juego p-3">
+
+                    <div class="carta-header-juego text-center p-2 mb-2">
+                        <div class="letra-especial ">MODIFICAR PERSONAJE<i class="fa-solid fa-masks-theater"></i></div>
+                    </div>
+
+                    <!-- FORMULARIO MODIFICAR PERFIL -->
+                    <form class="carta-body-juego" id="formModificarCuenta">
+
+
+                        <!-- NOMBRE -->
+                        <div class="mb-4 row">
+
+                            <div class="col-12">
+                                <label for="modificarNombreUser" class="form-label letra-normal letra-normal-bold col-12">Nombre</label>
+                                <input type="text"  id="modificarNombreUser" name="modificarNombreUser" class="input-transparente letra-normal w-100" placeholder="Nombre">
+                            </div>
+
+                        </div>
+
+                        <!-- APPAT -->
+                        <div class="mb-4 row">
+
+                            <div class="col-12">
+                                <label for="modificarApellidoPaterno" class="form-label letra-normal letra-normal-bold">Apellido Paterno</label>
+                                <input type="text" id="modificarApellidoPaterno" name="modificarApellidoPaterno" class="input-transparente letra-normal w-100" placeholder="Apellido">
+                            </div>
+
+                        </div>
+
+                        <!-- APMAT -->
+                        <div class="mb-4 row">
+
+                            <div class="col-12">
+                                <label for="modificarApellidoMaterno" class="form-label letra-normal letra-normal-bold">Apellido Materno</label>
+                                <input type="text" id="modificarApellidoMaterno" name="modificarApellidoMaterno" class="input-transparente letra-normal w-100 p-10" placeholder="Apellido">
+                            </div>
+                    
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="mb-4 row">
+
+                            <div class="col-12">
+                                <label for="modificarEmailUsuario" class="form-label letra-normal letra-normal-bold">Email</label>
+                                <input type="email" id="modificarEmailUsuario" name="modificarEmailUsuario" class="input-transparente letra-normal w-100 m-1" placeholder="tuemail@correo.com">
+                            </div>
+                        </div>
+                        
+                        <!-- DIRECCION -->
+                        <div class="mb-4 row">
+
+                            <div class="mb-4 col-12">
+                                <label for="modificarDireccionUsuario" class="form-label letra-normal letra-normal-bold">Dirección</label>
+                                <input type="text" id="modificarDireccionUsuario" name="modificarDireccionUsuario" class="input-transparente letra-normal w-100" placeholder="Dirección">
+                            </div>
+
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <label for="modificarContrasenaUsuario" class="form-label letra-normal letra-normal-bold">Contraseña</label>
+                                <input type="password" id="modificarContrasenaUsuario" name="modificarContrasenaUsuario" class="input-transparente letra-normal w-100" placeholder="••••••••">
+                            </div>
+
+                            <div class="col-6">
+                                <label for="modificarRepetirContrasenaUsuario" class="form-label letra-normal letra-normal-bold">Repetir</label>
+                                <input type="password" id="modificarRepetirContrasenaUsuario" name="modificarRepetirContrasenaUsuario" class="input-transparente letra-normal w-100" placeholder="••••••••">
+                            </div>
+                        </div>
+
+                        <!-- BOTONES -->
+                        <div class="row-12 text-center mb-3">
+                            <button type="submit" class="btn-bd-primary letra-normal p-2 w-100 d-block text-center" id="botonEnviarModificarForm">
+                                Modificar
+                            </button>
+                        </div>
+
+                        <div class="row-12 text-center mb-3">
+                            <button class="btn-bd-primary letra-normal p-2 w-100 text-center d-block" type="button" id="cerrarModificarUsuario">
+                                Cerrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <!-- ACORDEEON PARA PRESENTACION DE LA PROPUESTA -->
         <section class="mt-5 mb-5">
@@ -589,7 +686,11 @@
     <!-- CERRAR SESION JS -->
     <script src="../../static/js/cerrar_sesion.js"></script> 
 
-    <!-- NAV ADMIN -->
+    <!-- BOTON VOLVER ADMIN -->
     <script type="module" src="../../static/js/vista_usuario_admin.js"></script> 
+
+
+    <!-- VENTANA EMERGENTE MODIFICAR PERFIL -->
+    <script type="module" src="../../static/js/modificar_perfil.js"></script> 
 </body>
 </html>

@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const contrasenaUser = document.getElementById("contrasenaUser");
     const administrador = await getAdmin();
 
-
     iniciarSesionForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 

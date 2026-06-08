@@ -57,3 +57,35 @@ export function protegerUrlAdmin(){
         return;
     }
 } 
+
+export function validarCamposObligatorios(data) {
+
+    if (!noVacios(data)) { alert("Completa todos los campos obligatorios"); return false; }
+    if (!validarCampos(data)) { alert("Formato de datos inválido"); return false; }
+    if (data.contrasena !== data.r_contrasena) { alert("Las contraseñas no coinciden"); return false; }
+    
+    return true;
+}
+
+export function noVacios(data) {
+
+    return !(
+        data.nombre === "" || data.appat === "" ||
+        data.email === "" || data.direccion === "" ||
+        data.contrasena === "" || data.r_contrasena === ""
+    );
+
+}
+
+export function validarCampos(data) {
+
+    return (
+        validarNombre(data.nombre) &&
+        validarApellido(data.appat) &&
+        (data.apmat.trim() === "" || validarApellido(data.apmat)) &&
+        validarEmail(data.email) &&
+        validarContrasena(data.contrasena) &&
+        validarContrasena(data.r_contrasena)
+    );
+    
+}
