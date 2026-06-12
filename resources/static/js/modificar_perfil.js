@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // sessionStorage.clear();
 
     formModificarCuenta.addEventListener('submit', async (e) => {
+        e.preventDefault();
         modificarPerfil();
     })
 

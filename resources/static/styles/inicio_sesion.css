@@ -1,6 +1,6 @@
 
 .container-img-inicio-sesion{
-    background-image: url(/frontEndConBoostrap/resources/static/img/img_incial.png);
+    background-image: url(../img/img_incial.png);
     background-size: cover;    
     background-position: center; 
     background-repeat: no-repeat; 

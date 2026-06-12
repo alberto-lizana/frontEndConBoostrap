@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const contrasenaUser = document.getElementById("contrasenaUser");
     const administrador = await getAdmin();
 
+    // localStorage.clear();
+    // sessionStorage.clear();
+
     iniciarSesionForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
